@@ -1,0 +1,31 @@
+{
+  "name": "whereswaldo-backend",
+  "version": "1.0.0",
+  "description": "Backend repo for whereswaldo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "watch": "node --watch src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujbalak/whereswaldo-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/anujbalak/whereswaldo-backend/issues"
+  },
+  "homepage": "https://github.com/anujbalak/whereswaldo-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.9.0"
+  }
+}
