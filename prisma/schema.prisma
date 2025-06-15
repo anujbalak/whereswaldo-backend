@@ -13,3 +13,23 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Character {
+  id       String    @id @default(uuid())
+  name     String    @db.VarChar(255)
+  location Location?
+}
+
+model Location {
+  id          String    @id @default(uuid())
+  x           Int       @db.Integer
+  y           Int       @db.Integer
+  character   Character @relation(fields: [characterid], references: [id])
+  characterid String    @unique
+}
+
+model User {
+  id   String   @id @default(uuid())
+  name String   @default("The anonymous giant") @db.VarChar(255)
+  time DateTime @db.Time()
+}

@@ -4,6 +4,7 @@
   "description": "Backend repo for whereswaldo",
   "main": "index.js",
   "scripts": {
+    "populate": "node src/db/populate.js",
     "start": "node src/app.js",
     "watch": "node --watch src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
