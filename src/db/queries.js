@@ -2,13 +2,21 @@ import { PrismaClient } from "../../generated/prisma/client.js"
 
 const prisma = new PrismaClient();
 
-export const addUserInDB = async (name, time) => {
+export const addPlayerInDB = async (name, time) => {
     await prisma.user.create({
         data: {
             name,
             time
         }
     })
+}
+
+export const getAllPlayers = async () => {
+    return await prisma.user.findMany({
+        orderBy: {
+            time: 'asc'
+        }
+    });
 }
 
 export const allEasyCharactersNames = async (name, time) => {

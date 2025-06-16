@@ -3,6 +3,7 @@ import 'dotenv/config'
 import indexRouter from './router/indexRouter.js';
 import startRouter from './router/startRouter.js';
 import gameRouter from './router/gameRouter.js';
+import playerRouter from './router/playerRouter.js';
 
 const port=  process.env.PORT
 
@@ -22,8 +23,8 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter)
 app.use('/start', startRouter)
-app.use('/game', gameRouter),
-
+app.use('/game', gameRouter)
+app.use('/players', playerRouter)
 
 
 app.listen(port, () => console.log('Running the server at', port))

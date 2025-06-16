@@ -10,7 +10,6 @@ export const postEasyGame = async (req, res) => {
     try {
         const {name, x, y} = req.body;
         const result = await matchDetails(name, x, y);
-        console.log(result)
         if (!result) {
             return res.json({
                 message: 'Wrong choice',
