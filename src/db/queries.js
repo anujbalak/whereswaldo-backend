@@ -25,7 +25,7 @@ export const allEasyCharactersNames = async (name, time) => {
             name: true,
         },
         orderBy: {
-            id: 'desc'
+            createdAt: 'asc'
         }
     });
     return characters;

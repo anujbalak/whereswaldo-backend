@@ -53,8 +53,12 @@ const updateCharacter = async (id, name) => {
         }
     })
 }
+const removeAllData = async () => {
+    await prisma.character.deleteMany();
+}
 
+// removeAllData();
 // PushCharacters(easy1.name, easy1.x, easy1.y)
-// PushCharacters(easy2.name, easy2.x, easy2.y)
 // PushCharacters(easy3.name, easy3.x, easy3.y)
-// PushCharacters(easy4.name, easy4.x, easy4.y)
+//PushCharacters(easy2.name, easy2.x, easy2.y)
+//PushCharacters(easy4.name, easy4.x, easy4.y)

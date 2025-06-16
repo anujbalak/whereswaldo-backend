@@ -18,13 +18,14 @@ model Character {
   id       String    @id @default(uuid())
   name     String    @db.VarChar(255)
   location Location?
+  createdAt DateTime @db.Timestamp() @default(now())
 }
 
 model Location {
   id          String    @id @default(uuid())
   x           Int       @db.Integer
   y           Int       @db.Integer
-  character   Character @relation(fields: [characterid], references: [id])
+  character   Character @relation(fields: [characterid], references: [id], onDelete: Cascade)
   characterid String    @unique
 }
 
